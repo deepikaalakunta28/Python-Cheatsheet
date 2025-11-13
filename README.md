@@ -1,40 +1,8 @@
-## Python Dictionary Cheatsheet
+## Python Dictionary 
 Dictionaries are used to store data values in key:value pairs.
 A dictionary is a collection which is ordered*, changeable and do not allow duplicates.
-## Create and print a dictionary:
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-print(thisdict)
 
-## Dictionary Length
-print(len(thisdict))
-
-## The dict() Constructor
- thisdict = dict(name = "John", age = 36, country = "Norway")
-print(thisdict)
-
-## Check if Key Exists
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-if "model" in thisdict:
-  print("Yes, 'model' is one of the keys in the thisdict dictionary") 
-
-  ## Update Dictionary
-  **The update() method will update the dictionary with the items from the given argument.**
-  thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-thisdict.update({"year": 2020}) 
-
-# 🐍 Python Dictionary Methods Cheat Sheet
+#  Python Dictionary Methods 
 
 A complete reference for all **Python dictionary (`dict`) methods**, with syntax, descriptions, and short examples — clean and ready to use.
 
@@ -142,57 +110,31 @@ list(person.items())
 | **Pretty Print**                | Nicely format dict           | `import pprint; pprint.pprint(student)`                                                        |
 
 
-
-### 🧠 Quick Example
-
-```python
-school = {
-  "classA": {"student1": {"name": "Alice", "age": 25}},
-  "classB": {"student2": {"name": "Bob", "age": 23}}
-}
-
-# Access nested value
-print(school["classA"]["student1"]["name"])  # Alice
-
-# Update nested dict
-school["classB"]["student2"]["city"] = "Paris"
-
-# Iterate deeply
-for cls, students in school.items():
-    for sid, info in students.items():
-        print(cls, sid, info)
-```
-
 # 📚 Python Dictionary & Nested Dictionary References
+# Official Python Docs – Dictionaries
+https://docs.python.org/3/library/stdtypes.html#mapping-types-dict
 
-### 📘 Official Documentation
-- [Python Docs – Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)  
-  Covers standard dictionary operations, including nested dictionaries examples.
-- [Python dict Type Reference](https://docs.python.org/3/library/stdtypes.html#dict)  
-  Complete list of dictionary methods, useful for nested dictionary operations.
+# Python Tutorial – Dictionaries
+https://docs.python.org/3/tutorial/datastructures.html#dictionaries
 
-### 📝 Tutorials & Guides
-- [Real Python – Dictionaries 101](https://realpython.com/python-dicts/)  
-  Comprehensive guide to Python dictionaries.
-- [W3Schools – Python Dictionary](https://www.w3schools.com/python/python_dictionaries.asp)  
-  Basic and intermediate dictionary operations.
-- [GeeksforGeeks – Dictionary Methods](https://www.geeksforgeeks.org/python-dictionary/)  
-  Covers dictionary methods and examples.
-- [Programiz – Python Dictionary](https://www.programiz.com/python-programming/dictionary)  
-  Clear examples and tutorials.
-- [Real Python – Nested Dictionaries](https://realpython.com/python-nested-dictionaries/)  
-  Full guide on creating, accessing, updating, and iterating nested dictionaries.
-- [Programiz – Python Nested Dictionary](https://www.programiz.com/python-programming/nested-dictionary)  
-  Examples with nested loops, safe access, and modification.
-- [GeeksforGeeks – Nested Dictionaries](https://www.geeksforgeeks.org/python-nested-dictionary/)  
-  Accessing, modifying, iterating, flattening, and merging nested dictionaries.
-- [W3Schools – Python Dictionaries (Nested)](https://www.w3schools.com/python/python_dictionaries.asp)  
-  Applies dictionary operations to nested structures.
+# W3Schools – Python Dictionaries
+https://www.w3schools.com/python/python_dictionaries.asp
+
+# Real Python – Dictionaries
+https://realpython.com/python-dicts/
+
+# Programiz – Python Dictionary
+https://www.programiz.com/python-programming/dictionary
+
+# GeeksforGeeks – Python Dictionary Methods
+https://www.geeksforgeeks.org/python-dictionary/
+
+# DataCamp – Python Dictionary Tutorial
+https://www.datacamp.com/community/tutorials/python-dictionary-tutorial
 
 
 
-
-## Python Lists CheatSheet
+## Lists Methods
 
 | Method                          | Description                                           | Example                                   |
 | ------------------------------- | ----------------------------------------------------- | ----------------------------------------- |
@@ -208,25 +150,13 @@ for cls, students in school.items():
 | `reverse()`                     | Reverses list in-place                                | `my_list.reverse()` → `[4,3,2,1]`         |
 | `copy()`                        | Returns a shallow copy                                | `new_list = my_list.copy()`               |
 
-## List Comprehensions
-# Basic
-squares = [x**2 for x in range(5)] # [0,1,4,9,16]
 
-# With condition
-even_squares = [x**2 for x in range(10) if x%2==0] # [0,4,16,36,64]
 
-# Nested comprehension
-matrix = [[i*j for j in range(3)] for i in range(3)]
-# [[0,0,0],[0,1,2],[0,2,4]]
+-Official Python Docs: https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
+-W3Schools Python Lists: https://www.w3schools.com/python/python_lists.asp
+-Real Python List Guide: https://realpython.com/python-lists-tuples
 
-## Reference Links
-Reference Links
-
-Official Python Docs: https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
-W3Schools Python Lists: https://www.w3schools.com/python/python_lists.asp
-Real Python List Guide: https://realpython.com/python-lists-tuples
-
-## String cheatsheet
+## String Methods
 | Method                        | Description                             | Example                                           |
 | ----------------------------- | --------------------------------------- | ------------------------------------------------- |
 | `str.upper()`                 | Converts to uppercase                   | `"hello".upper()` → `"HELLO"`                     |
@@ -253,6 +183,6 @@ Real Python List Guide: https://realpython.com/python-lists-tuples
 | `f-string`                    | Modern string formatting                | `name="Alice"; f"Hello {name}"` → `"Hello Alice"` |
 
 ## Reference Links
-Official Python Docs: https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
-W3Schools Strings: https://www.w3schools.com/python/python_strings.asp
-Real Python String Guide: https://realpython.com/python-strings/
+-Official Python Docs: https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
+-W3Schools Strings: https://www.w3schools.com/python/python_strings.asp
+-Real Python String Guide: https://realpython.com/python-strings/
