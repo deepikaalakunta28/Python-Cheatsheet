@@ -167,16 +167,22 @@ https://www.datacamp.com/community/tutorials/python-list-tutorial
 ## Reference Links
 Official Python Docs – Strings
 https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
+
 Python Tutorial – Strings
 https://docs.python.org/3/tutorial/introduction.html#strings
+
 W3Schools – Python Strings
 https://www.w3schools.com/python/python_strings.asp
+
 Real Python – Python Strings Guide
 https://realpython.com/python-strings/
+
 Programiz – Python String Tutorial
 https://www.programiz.com/python-programming/string
+
 GeeksforGeeks – Python String Methods
 https://www.geeksforgeeks.org/python-string/
+
 DataCamp – Python String Tutorial
 https://www.datacamp.com/community/tutorials/python-strings-tutorial
 
