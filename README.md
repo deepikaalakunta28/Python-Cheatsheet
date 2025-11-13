@@ -34,17 +34,67 @@ if "model" in thisdict:
 }
 thisdict.update({"year": 2020}) 
 
-### 🧩 Dictionary Methods (Quick Reference)
+# 🐍 Python Dictionary Methods Cheat Sheet
+
+A complete reference for all **Python dictionary (`dict`) methods**, with syntax, descriptions, and short examples — clean and ready to use.
+
+---
+
+## 📘 Dictionary Methods Table
 
 | Method | Description | Example |
 |--------|--------------|----------|
+| `d.clear()` | Removes all items from the dictionary | `d.clear()` → `{}` |
+| `d.copy()` | Returns a shallow copy of the dictionary | `new_d = d.copy()` |
+| `dict.fromkeys(seq, value)` | Creates a new dictionary from sequence with specified value | `dict.fromkeys(['a', 'b'], 0)` → `{'a': 0, 'b': 0}` |
+| `d.get(key, default)` | Returns value for key, or default if key not found | `d.get('age', 0)` → `25` |
+| `d.items()` | Returns key-value pairs view | `dict_items([('name', 'Alice'), ('age', 25)])` |
 | `d.keys()` | Returns all keys | `dict_keys(['name', 'age'])` |
 | `d.values()` | Returns all values | `dict_values(['Alice', 25])` |
-| `d.items()` | Returns key-value pairs | `dict_items([('name', 'Alice'), ('age', 25)])` |
-| `d.copy()` | Shallow copy | `new_d = d.copy()` |
-| `d.update(other)` | Merges another dict | `d.update({"city": "NYC"})` |
-| `d.setdefault(k, v)` | Sets default if key missing | `d.setdefault("country", "USA")` |
-| `d.fromkeys(keys, value)` | Create dict from keys | `dict.fromkeys(["a", "b"], 0)` → `{'a': 0, 'b': 0}` |
+| `d.pop(key, default)` | Removes key and returns its value | `d.pop('age')` → `25` |
+| `d.popitem()` | Removes and returns the last inserted key-value pair | `d.popitem()` → `('age', 25)` |
+| `d.setdefault(key, default)` | Returns value; inserts key with default if not present | `d.setdefault('city', 'NYC')` → `'NYC'` |
+| `d.update(other)` | Merges another dictionary into current one | `d.update({'city': 'Paris'})` |
+| `len(d)` | Returns the number of key-value pairs | `len(d)` → `2` |
+| `key in d` | Checks if key exists in dictionary | `'name' in d` → `True` |
+| `d[key]` | Access value for given key | `d['name']` → `'Alice'` |
+| `d[key] = value` | Add or update key-value pair | `d['age'] = 26` |
+| `del d[key]` | Delete a key-value pair | `del d['age']` |
+| `for k in d:` | Iterates over dictionary keys | `for k in d: print(k)` |
+| `for k, v in d.items()` | Iterates over key-value pairs | `for k, v in d.items(): print(k, v)` |
+
+---
+
+## 🧠 Extra: Dictionary Union (Python ≥ 3.9)
+
+| Operation | Description | Example |
+|------------|--------------|----------|
+| `d1 | d2` | Returns a new merged dictionary | `{'a': 1, 'b': 2} | {'b': 3}` → `{'a': 1, 'b': 3}` |
+| `d1 |= d2` | Updates `d1` with keys/values from `d2` | `d1 |= {'c': 4}` |
+
+---
+
+## 🧩 Quick Example
+
+```python
+d = {"name": "Alice", "age": 25}
+
+# Access
+print(d["name"])        # Alice
+print(d.get("age", 0))  # 25
+
+# Add / Update
+d["city"] = "Paris"
+d.update({"email": "alice@example.com"})
+
+# Remove
+d.pop("age")
+d.popitem()
+
+# Iterate
+for k, v in d.items():
+    print(k, v)
+
 
 ## Conversion Between Types
 # List of tuples → dict
