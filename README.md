@@ -122,9 +122,8 @@ list(person.items())
 | **Comprehension** | Create from expression          | `{k: v*2 for k,v in d.items()}`           |   
 
 
-```
----
-| Operation                       | Description                  | Example                                                                                        |---------------------------------------------------------------------------------------------- |
+| Operation                       | Description                  | Example                                                                                        |
+|---------------------------------|------------------------------|------------------------------------------------------------------------------------------------|
 | **Create Nested Dict**          | Dictionary within dictionary | `student = {"name": "Alice", "details": {"age": 25}}`                                          |
 | **Access Nested Value**         | Access deeper value          | `student["details"]["age"]`                                                                    |
 | **Safe Access**                 | Avoid KeyError               | `student.get("details", {}).get("age", 0)`                                                     |
@@ -133,17 +132,15 @@ list(person.items())
 | **Delete Nested Key**           | Remove key from inner dict   | `del student["details"]["age"]`                                                                |
 | **Pop Nested Key**              | Remove key safely            | `student["details"].pop("age", None)`                                                          |
 | **Iterate Nested**              | Loop outer and inner keys    | `for k,v in student.items(): print(k,v)`                                                       |
-| **Nested Loop**                 | Loop deeper dicts            | `for k,v in student.items(): if isinstance(v,dict): for sk,sv in v.items(): print(sk,sv)`      |
+| **Nested Loop**                 | Loop deeper dicts            | `for k,v in student.items():\n    if isinstance(v,dict):\n        for sk,sv in v.items(): print(sk,sv)` |
 | **Check Nested Key**            | Key exists in inner dict     | `'city' in student["details"]`                                                                 |
 | **Merge Nested Dicts**          | Merge inner dict values      | `student["details"].update({"grade":"A"})`                                                     |
 | **Dynamic Create (setdefault)** | Auto-create nested dict      | `data.setdefault("user", {}).setdefault("info", {})["name"]="Alice"`                           |
-| **Traverse Recursively**        | Print all nested levels      | `def traverse(d): for k,v in d.items(): print(k,v) if not isinstance(v,dict) else traverse(v)` |
+| **Traverse Recursively**        | Print all nested levels      | `def traverse(d):\n    for k,v in d.items():\n        if isinstance(v,dict): traverse(v)\n        else: print(k,v)` |
 | **Flatten Nested Dict**         | Multi-level → single-level   | `{'details.age':25}`                                                                           |
 | **Unflatten Dict**              | Single-level → nested        | `{'details':{'age':25}}`                                                                       |
 | **Pretty Print**                | Nicely format dict           | `import pprint; pprint.pprint(student)`                                                        |
 
----
-```
 
 
 ### 🧠 Quick Example
