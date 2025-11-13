@@ -113,7 +113,7 @@ list(person.values())
 
 # Dict → list of tuples
 list(person.items())
-
+---
 ### 🏁 Dictionary Operations Summary
 
 | Operation     | Description                      | Example |
@@ -127,7 +127,7 @@ list(person.items())
 | **Copy**          | Shallow copy of dictionary | `new_d = d.copy()` |
 | **Merge**         | Combine dictionaries | `{**d1, **d2}` or `d1 | d2` |
 | **Comprehension** | Create from expression | `{k: v*2 for k, v in d.items()}` |
-
+---
 ## 📚 References & Further Reading
 
 - [Python Docs – Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
