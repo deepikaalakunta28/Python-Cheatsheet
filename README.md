@@ -106,7 +106,7 @@ list(person.values())
 
 # Dict → list of tuples
 list(person.items())
-
+```
 ### 🏁 Dictionary Operations Summary
 
 | Operation         | Description                     | Example                                   |     
