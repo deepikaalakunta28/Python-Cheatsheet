@@ -189,13 +189,70 @@ for cls, students in school.items():
 - [W3Schools – Python Dictionaries (Nested)](https://www.w3schools.com/python/python_dictionaries.asp)  
   Applies dictionary operations to nested structures.
 
-### 🔧 Advanced & Utility Resources
-- [Flattening Nested Dictionaries (Stack Overflow)](https://stackoverflow.com/questions/6027558/flatten-nested-python-dictionaries-compressing-keys)  
-  Practical functions for flattening nested dictionaries.
-- [Deep Merging Nested Dictionaries (Stack Overflow)](https://stackoverflow.com/questions/7204805/how-to-merge-dictionaries-of-dictionaries)  
-  Techniques for recursively merging dictionaries in Python.
-- [Python `defaultdict` for Nested Structures](https://docs.python.org/3/library/collections.html#collections.defaultdict)  
-  Using `defaultdict` for dynamically creating nested dictionaries without key errors.
 
 
 
+##Python Lists CheatSheet
+
+| Method                          | Description                                           | Example                                   |
+| ------------------------------- | ----------------------------------------------------- | ----------------------------------------- |
+| `append(x)`                     | Adds element `x` at the end                           | `my_list.append(5)` → `[1,2,3,4,5]`       |
+| `insert(i, x)`                  | Inserts `x` at index `i`                              | `my_list.insert(1, 10)` → `[1,10,2,3,4]`  |
+| `extend(iterable)`              | Adds elements from iterable                           | `my_list.extend([6,7])` → `[1,2,3,4,6,7]` |
+| `remove(x)`                     | Removes first occurrence of `x`                       | `my_list.remove(2)` → `[1,3,4]`           |
+| `pop([i])`                      | Removes & returns element at index `i` (default last) | `my_list.pop()` → `4`, list → `[1,2,3]`   |
+| `clear()`                       | Removes all elements                                  | `my_list.clear()` → `[]`                  |
+| `index(x[, start[, end]])`      | Returns first index of `x`                            | `my_list.index(3)` → `2`                  |
+| `count(x)`                      | Counts occurrences of `x`                             | `my_list.count(2)` → `1`                  |
+| `sort(key=None, reverse=False)` | Sorts list in-place                                   | `my_list.sort()` → `[1,2,3,4]`            |
+| `reverse()`                     | Reverses list in-place                                | `my_list.reverse()` → `[4,3,2,1]`         |
+| `copy()`                        | Returns a shallow copy                                | `new_list = my_list.copy()`               |
+
+## List Comprehensions
+# Basic
+squares = [x**2 for x in range(5)] # [0,1,4,9,16]
+
+# With condition
+even_squares = [x**2 for x in range(10) if x%2==0] # [0,4,16,36,64]
+
+# Nested comprehension
+matrix = [[i*j for j in range(3)] for i in range(3)]
+# [[0,0,0],[0,1,2],[0,2,4]]
+
+## Reference Links
+Reference Links
+
+Official Python Docs: https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
+W3Schools Python Lists: https://www.w3schools.com/python/python_lists.asp
+Real Python List Guide: https://realpython.com/python-lists-tuples
+
+## String cheatsheet
+| Method                        | Description                             | Example                                           |
+| ----------------------------- | --------------------------------------- | ------------------------------------------------- |
+| `str.upper()`                 | Converts to uppercase                   | `"hello".upper()` → `"HELLO"`                     |
+| `str.lower()`                 | Converts to lowercase                   | `"HELLO".lower()` → `"hello"`                     |
+| `str.title()`                 | Capitalizes each word                   | `"hello world".title()` → `"Hello World"`         |
+| `str.capitalize()`            | Capitalizes first letter                | `"hello".capitalize()` → `"Hello"`                |
+| `str.strip([chars])`          | Removes leading/trailing chars          | `"  hello  ".strip()` → `"hello"`                 |
+| `str.lstrip([chars])`         | Removes leading chars                   | `"  hello".lstrip()` → `"hello"`                  |
+| `str.rstrip([chars])`         | Removes trailing chars                  | `"hello  ".rstrip()` → `"hello"`                  |
+| `str.replace(old, new)`       | Replaces substring                      | `"hello".replace('l','x')` → `"hexxo"`            |
+| `str.split(sep=None)`         | Splits string to list                   | `"a,b,c".split(',')` → `['a','b','c']`            |
+| `str.join(iterable)`          | Joins iterable into string              | `",".join(['a','b'])` → `"a,b"`                   |
+| `str.find(sub)`               | Returns index of first occurrence or -1 | `"hello".find('l')` → 2                           |
+| `str.index(sub)`              | Like find but raises error if not found | `"hello".index('l')` → 2                          |
+| `str.count(sub)`              | Counts occurrences                      | `"hello".count('l')` → 2                          |
+| `str.startswith(prefix)`      | Checks start                            | `"hello".startswith('he')` → True                 |
+| `str.endswith(suffix)`        | Checks end                              | `"hello".endswith('lo')` → True                   |
+| `str.isalpha()`               | Checks if all letters                   | `"abc".isalpha()` → True                          |
+| `str.isdigit()`               | Checks if all digits                    | `"123".isdigit()` → True                          |
+| `str.isspace()`               | Checks if all whitespace                | `"   ".isspace()` → True                          |
+| `str.isalnum()`               | Checks letters + digits                 | `"abc123".isalnum()` → True                       |
+| `str.zfill(width)`            | Pads with zeros on left                 | `"42".zfill(5)` → `"00042"`                       |
+| `str.format(*args, **kwargs)` | Format string                           | `"Hello {}".format("World")` → `"Hello World"`    |
+| `f-string`                    | Modern string formatting                | `name="Alice"; f"Hello {name}"` → `"Hello Alice"` |
+
+## Reference Links
+Official Python Docs: https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
+W3Schools Strings: https://www.w3schools.com/python/python_strings.asp
+Real Python String Guide: https://realpython.com/python-strings/
