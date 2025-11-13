@@ -122,6 +122,7 @@ list(person.items())
 | **Comprehension** | Create from expression          | `{k: v*2 for k,v in d.items()}`           |   
 
 
+```
 ---
 | Operation                       | Description                  | Example                                                                                        |---------------------------------------------------------------------------------------------- |
 | **Create Nested Dict**          | Dictionary within dictionary | `student = {"name": "Alice", "details": {"age": 25}}`                                          |
@@ -142,7 +143,7 @@ list(person.items())
 | **Pretty Print**                | Nicely format dict           | `import pprint; pprint.pprint(student)`                                                        |
 
 ---
-
+```
 
 
 ### 🧠 Quick Example
