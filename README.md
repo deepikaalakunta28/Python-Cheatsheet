@@ -75,19 +75,6 @@ list(person.values())
 # Dict → list of tuples
 list(person.items())
 ```
-### 🏁 Dictionary Operations Summary
-
-| Operation         | Description                     | Example                                   |     
-| ----------------- | ------------------------------- | ----------------------------------------- | 
-| **Create**        | Create a new dictionary         | `d = {"a": 1, "b": 2}`                    |     
-| **Access**        | Retrieve values by key          | `d["a"]`, `d.get("a", 0)`                 |    
-| **Add / Update**  | Add new or modify existing key  | `d["c"] = 3`, `d.update({"d": 4})`        |     
-| **Remove**        | Delete items                    | `d.pop("a")`, `del d["b"]`, `d.popitem()` |     
-| **Loop**          | Iterate through key-value pairs | `for k,v in d.items(): print(k,v)`        |     
-| **Check Key**     | Check if key exists             | `'a' in d`                                |     
-| **Copy**          | Shallow copy                    | `new_d = d.copy()`                        |     
-| **Merge**         | Combine dictionaries            | `{**d1, **d2}` or `d1                     | 
-| **Comprehension** | Create from expression          | `{k: v*2 for k,v in d.items()}`           |   
 
 
 | Operation                       | Description                  | Example                                                                                        |
@@ -110,28 +97,14 @@ list(person.items())
 | **Pretty Print**                | Nicely format dict           | `import pprint; pprint.pprint(student)`                                                        |
 
 
-# 📚 Python Dictionary & Nested Dictionary References
-# Official Python Docs – Dictionaries
+# Reference Links
 https://docs.python.org/3/library/stdtypes.html#mapping-types-dict
-
-# Python Tutorial – Dictionaries
 https://docs.python.org/3/tutorial/datastructures.html#dictionaries
-
-# W3Schools – Python Dictionaries
 https://www.w3schools.com/python/python_dictionaries.asp
-
-# Real Python – Dictionaries
 https://realpython.com/python-dicts/
-
-# Programiz – Python Dictionary
 https://www.programiz.com/python-programming/dictionary
-
-# GeeksforGeeks – Python Dictionary Methods
 https://www.geeksforgeeks.org/python-dictionary/
-
-# DataCamp – Python Dictionary Tutorial
 https://www.datacamp.com/community/tutorials/python-dictionary-tutorial
-
 
 
 ## Lists Methods
@@ -150,11 +123,20 @@ https://www.datacamp.com/community/tutorials/python-dictionary-tutorial
 | `reverse()`                     | Reverses list in-place                                | `my_list.reverse()` → `[4,3,2,1]`         |
 | `copy()`                        | Returns a shallow copy                                | `new_list = my_list.copy()`               |
 
+## Reference Links
+Official Python Docs – Lists
+https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
+W3Schools – Python Lists
+https://www.w3schools.com/python/python_lists.asp
+Real Python – Python Lists Guide
+https://realpython.com/python-lists-tuples/
+Programiz – Python List Tutorial
+https://www.programiz.com/python-programming/list
+GeeksforGeeks – Python List Methods
+https://www.geeksforgeeks.org/python-list/
+DataCamp – Python List Tutorial
+https://www.datacamp.com/community/tutorials/python-list-tutorial
 
-
--Official Python Docs: https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
--W3Schools Python Lists: https://www.w3schools.com/python/python_lists.asp
--Real Python List Guide: https://realpython.com/python-lists-tuples
 
 ## String Methods
 | Method                        | Description                             | Example                                           |
@@ -183,6 +165,18 @@ https://www.datacamp.com/community/tutorials/python-dictionary-tutorial
 | `f-string`                    | Modern string formatting                | `name="Alice"; f"Hello {name}"` → `"Hello Alice"` |
 
 ## Reference Links
--Official Python Docs: https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
--W3Schools Strings: https://www.w3schools.com/python/python_strings.asp
--Real Python String Guide: https://realpython.com/python-strings/
+Official Python Docs – Strings
+https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
+Python Tutorial – Strings
+https://docs.python.org/3/tutorial/introduction.html#strings
+W3Schools – Python Strings
+https://www.w3schools.com/python/python_strings.asp
+Real Python – Python Strings Guide
+https://realpython.com/python-strings/
+Programiz – Python String Tutorial
+https://www.programiz.com/python-programming/string
+GeeksforGeeks – Python String Methods
+https://www.geeksforgeeks.org/python-string/
+DataCamp – Python String Tutorial
+https://www.datacamp.com/community/tutorials/python-strings-tutorial
+
