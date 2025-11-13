@@ -8,7 +8,7 @@ A complete reference for all **Python dictionary (`dict`) methods**, with syntax
 
 ---
 
-## 📘 Dictionary Methods Table
+## Dictionary Methods Table
 
 | Method | Description | Example |
 |--------|--------------|----------|
@@ -35,7 +35,7 @@ A complete reference for all **Python dictionary (`dict`) methods**, with syntax
 
 ---
 
-## 🧩 Quick Example
+##  Quick Example
 
 ```python
 d = {"name": "Alice", "age": 25}
