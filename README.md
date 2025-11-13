@@ -109,57 +109,39 @@ list(person.items())
 
 ### 🏁 Dictionary Operations Summary
 
-| Operation | Description | Example |
-| ---------- | ------------ | -------- |
-| **Create** | Create a new dictionary | `d = {"a": 1, "b": 2}` |
-| **Access** | Retrieve values by key | `d["a"]`, `d.get("a")` |
-| **Add / Update** | Add new or modify existing key | `d["c"] = 3` |
-| **Remove** | Delete items | `d.pop("a")`, `del d["a"]` |
-| **Loop** | Iterate through key-value pairs | `for k, v in d.items(): print(k, v)` |
-| **Check Key** | Check if a key exists | `'a' in d` |
-| **Copy** | Shallow copy of dictionary | `new_d = d.copy()` |
-| **Merge** | Combine dictionaries | `{**d1, **d2}` or `d1 | d2` |
-| **Comprehension** | Create from expression | `{k: v*2 for k, v in d.items()}` |
+| Operation         | Description                     | Example                                   |     
+| ----------------- | ------------------------------- | ----------------------------------------- | 
+| **Create**        | Create a new dictionary         | `d = {"a": 1, "b": 2}`                    |     
+| **Access**        | Retrieve values by key          | `d["a"]`, `d.get("a", 0)`                 |    
+| **Add / Update**  | Add new or modify existing key  | `d["c"] = 3`, `d.update({"d": 4})`        |     
+| **Remove**        | Delete items                    | `d.pop("a")`, `del d["b"]`, `d.popitem()` |     
+| **Loop**          | Iterate through key-value pairs | `for k,v in d.items(): print(k,v)`        |     
+| **Check Key**     | Check if key exists             | `'a' in d`                                |     
+| **Copy**          | Shallow copy                    | `new_d = d.copy()`                        |     
+| **Merge**         | Combine dictionaries            | `{**d1, **d2}` or `d1                     | 
+| **Comprehension** | Create from expression          | `{k: v*2 for k,v in d.items()}`           |   
+
 
 ---
-
-## 🧩 Python Nested Dictionary Cheat Sheet
-
-| Operation | Description | Example |
-|------------|--------------|----------|
-| **Create Nested Dict** | Define a dictionary within another | `student = {"name": "Alice", "details": {"age": 25, "city": "London"}}` |
-| **Access Nested Value** | Access deeper values | `student["details"]["city"]` → `'London'` |
-| **Safe Access** | Prevent `KeyError` | `student.get("details", {}).get("age")` → `25` |
-| **Add Nested Key** | Add a key inside inner dict | `student["details"]["country"] = "UK"` |
-| **Update Nested Key** | Modify nested value | `student["details"]["age"] = 26` |
-| **Delete Nested Key** | Remove key from inner dict | `del student["details"]["city"]` |
-| **Delete Inner Dict** | Remove entire inner dictionary | `del student["details"]` |
-| **Pop Nested Key** | Safely remove nested key | `student["details"].pop("age", None)` |
-| **Iterate Nested** | Loop through outer and inner keys | `for k, v in student.items(): print(k, v)` |
-| **Nested Loop** | Handle deeper dicts | `for k,v in student.items(): if isinstance(v, dict): for subk, subv in v.items(): print(subk, subv)` |
-| **Check Nested Key** | Check key in nested dict | `'city' in student["details"]` → `True` |
-| **Merge Nested Dicts** | Merge inner values | `student["details"].update({"grade": "A"})` |
-| **Dynamic Create (setdefault)** | Auto-create nested dicts | `data.setdefault("user", {}).setdefault("info", {})["name"] = "Alice"` |
-| **Dynamic Create (defaultdict)** | Infinite-depth dicts | `from collections import defaultdict; nested = lambda: defaultdict(nested); nested()["x"]["y"] = 1` |
-| **Traverse Recursively** | Print all levels | `def traverse(d): for k,v in d.items(): print(k,v) if not isinstance(v,dict) else traverse(v)` |
-| **Flatten Nested Dict** | Multi-level → single-level | `{'details.age': 25, 'details.city': 'London'}` |
-| **Unflatten Dict** | Single-level → nested | `{'details': {'age': 25, 'city': 'London'}}` |
-| **Deep Merge Dicts** | Merge recursively | `deep_merge(a, b)` |
-| **Convert to JSON** | Serialize nested dict | `json.dumps(student, indent=2)` |
-| **Pretty Print** | Nicely formatted output | `import pprint; pprint.pprint(student)` |
-| **Get All Keys (Recursive)** | Collect all keys | `def keys(d): [k for k,v in d.items() if not isinstance(v,dict)]` |
-| **Convert to List** | Get values from nested level | `list(student["details"].values())` |
-| **Length** | Count top-level keys | `len(student)` |
-| **Clear** | Remove all items | `student.clear()` |
-| **Comprehension** | Create nested dict | `{cls: {stu: stu*2 for stu in range(2)} for cls in ["A","B"]}` |
+| Operation                       | Description                  | Example                                                                                        |---------------------------------------------------------------------------------------------- |
+| **Create Nested Dict**          | Dictionary within dictionary | `student = {"name": "Alice", "details": {"age": 25}}`                                          |
+| **Access Nested Value**         | Access deeper value          | `student["details"]["age"]`                                                                    |
+| **Safe Access**                 | Avoid KeyError               | `student.get("details", {}).get("age", 0)`                                                     |
+| **Add Nested Key**              | Add key inside inner dict    | `student["details"]["city"] = "Paris"`                                                         |
+| **Update Nested Key**           | Modify nested value          | `student["details"]["age"] = 26`                                                               |
+| **Delete Nested Key**           | Remove key from inner dict   | `del student["details"]["age"]`                                                                |
+| **Pop Nested Key**              | Remove key safely            | `student["details"].pop("age", None)`                                                          |
+| **Iterate Nested**              | Loop outer and inner keys    | `for k,v in student.items(): print(k,v)`                                                       |
+| **Nested Loop**                 | Loop deeper dicts            | `for k,v in student.items(): if isinstance(v,dict): for sk,sv in v.items(): print(sk,sv)`      |
+| **Check Nested Key**            | Key exists in inner dict     | `'city' in student["details"]`                                                                 |
+| **Merge Nested Dicts**          | Merge inner dict values      | `student["details"].update({"grade":"A"})`                                                     |
+| **Dynamic Create (setdefault)** | Auto-create nested dict      | `data.setdefault("user", {}).setdefault("info", {})["name"]="Alice"`                           |
+| **Traverse Recursively**        | Print all nested levels      | `def traverse(d): for k,v in d.items(): print(k,v) if not isinstance(v,dict) else traverse(v)` |
+| **Flatten Nested Dict**         | Multi-level → single-level   | `{'details.age':25}`                                                                           |
+| **Unflatten Dict**              | Single-level → nested        | `{'details':{'age':25}}`                                                                       |
+| **Pretty Print**                | Nicely format dict           | `import pprint; pprint.pprint(student)`                                                        |
 
 ---
-
-✅ **Tips for Clean Markdown Tables**
-- Use single backticks (`) for inline code.
-- Don’t add newlines inside table cells.
-- Avoid triple backticks (```) inside tables.
-- Keep column widths aligned for readability.
 
 
 
