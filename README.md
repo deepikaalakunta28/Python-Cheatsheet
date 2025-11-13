@@ -126,14 +126,19 @@ https://www.datacamp.com/community/tutorials/python-dictionary-tutorial
 ## Reference Links
 Official Python Docs – Lists
 https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
+
 W3Schools – Python Lists
 https://www.w3schools.com/python/python_lists.asp
+
 Real Python – Python Lists Guide
 https://realpython.com/python-lists-tuples/
+
 Programiz – Python List Tutorial
 https://www.programiz.com/python-programming/list
+
 GeeksforGeeks – Python List Methods
 https://www.geeksforgeeks.org/python-list/
+
 DataCamp – Python List Tutorial
 https://www.datacamp.com/community/tutorials/python-list-tutorial
 
