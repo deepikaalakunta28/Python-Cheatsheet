@@ -161,13 +161,41 @@ school["classB"]["student2"]["city"] = "Paris"
 for cls, students in school.items():
     for sid, info in students.items():
         print(cls, sid, info)
+```
 
-## 📚 References & Further Reading
+# 📚 Python Dictionary & Nested Dictionary References
 
-- [Python Docs – Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
-- [Python dict Type Reference](https://docs.python.org/3/library/stdtypes.html#dict)
-- [Real Python – Dictionaries 101](https://realpython.com/python-dicts/)
-- [W3Schools – Python Dictionary](https://www.w3schools.com/python/python_dictionaries.asp)
-- [GeeksforGeeks – Dictionary Methods](https://www.geeksforgeeks.org/python-dictionary/)
-- [Programiz – Python Dictionary](https://www.programiz.com/python-programming/dictionary)
+### 📘 Official Documentation
+- [Python Docs – Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)  
+  Covers standard dictionary operations, including nested dictionaries examples.
+- [Python dict Type Reference](https://docs.python.org/3/library/stdtypes.html#dict)  
+  Complete list of dictionary methods, useful for nested dictionary operations.
+
+### 📝 Tutorials & Guides
+- [Real Python – Dictionaries 101](https://realpython.com/python-dicts/)  
+  Comprehensive guide to Python dictionaries.
+- [W3Schools – Python Dictionary](https://www.w3schools.com/python/python_dictionaries.asp)  
+  Basic and intermediate dictionary operations.
+- [GeeksforGeeks – Dictionary Methods](https://www.geeksforgeeks.org/python-dictionary/)  
+  Covers dictionary methods and examples.
+- [Programiz – Python Dictionary](https://www.programiz.com/python-programming/dictionary)  
+  Clear examples and tutorials.
+- [Real Python – Nested Dictionaries](https://realpython.com/python-nested-dictionaries/)  
+  Full guide on creating, accessing, updating, and iterating nested dictionaries.
+- [Programiz – Python Nested Dictionary](https://www.programiz.com/python-programming/nested-dictionary)  
+  Examples with nested loops, safe access, and modification.
+- [GeeksforGeeks – Nested Dictionaries](https://www.geeksforgeeks.org/python-nested-dictionary/)  
+  Accessing, modifying, iterating, flattening, and merging nested dictionaries.
+- [W3Schools – Python Dictionaries (Nested)](https://www.w3schools.com/python/python_dictionaries.asp)  
+  Applies dictionary operations to nested structures.
+
+### 🔧 Advanced & Utility Resources
+- [Flattening Nested Dictionaries (Stack Overflow)](https://stackoverflow.com/questions/6027558/flatten-nested-python-dictionaries-compressing-keys)  
+  Practical functions for flattening nested dictionaries.
+- [Deep Merging Nested Dictionaries (Stack Overflow)](https://stackoverflow.com/questions/7204805/how-to-merge-dictionaries-of-dictionaries)  
+  Techniques for recursively merging dictionaries in Python.
+- [Python `defaultdict` for Nested Structures](https://docs.python.org/3/library/collections.html#collections.defaultdict)  
+  Using `defaultdict` for dynamically creating nested dictionaries without key errors.
+
+
 
