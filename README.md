@@ -65,13 +65,6 @@ A complete reference for all **Python dictionary (`dict`) methods**, with syntax
 
 ---
 
-## 🧠 Extra: Dictionary Union (Python ≥ 3.9)
-
-| Operation | Description | Example |
-|------------|--------------|----------|
-| `d1 | d2` | Returns a new merged dictionary | `{'a': 1, 'b': 2} | {'b': 3}` → `{'a': 1, 'b': 3}` |
-| `d1 |= d2` | Updates `d1` with keys/values from `d2` | `d1 |= {'c': 4}` |
-
 ---
 
 ## 🧩 Quick Example
@@ -113,6 +106,7 @@ list(person.values())
 
 # Dict → list of tuples
 list(person.items())
+
 ### 🏁 Dictionary Operations Summary
 
 | Operation | Description | Example |
@@ -127,37 +121,47 @@ list(person.items())
 | **Merge** | Combine dictionaries | `{**d1, **d2}` or `d1 | d2` |
 | **Comprehension** | Create from expression | `{k: v*2 for k, v in d.items()}` |
 
-# 🧩 Python Nested Dictionary Cheat Sheet
+---
+
+## 🧩 Python Nested Dictionary Cheat Sheet
 
 | Operation | Description | Example |
 |------------|--------------|----------|
 | **Create Nested Dict** | Define a dictionary within another | `student = {"name": "Alice", "details": {"age": 25, "city": "London"}}` |
-| **Access Nested Value** | Use multiple keys to access deeper values | `student["details"]["city"]` → `'London'` |
-| **Safe Access** | Prevent `KeyError` using `.get()` | `student.get("details", {}).get("age")` → `25` |
-| **Add Nested Key** | Add a key inside an inner dictionary | `student["details"]["country"] = "UK"` |
-| **Update Nested Key** | Modify an existing nested value | `student["details"]["age"] = 26` |
-| **Delete Nested Key** | Remove a key from nested dict | `del student["details"]["city"]` |
+| **Access Nested Value** | Access deeper values | `student["details"]["city"]` → `'London'` |
+| **Safe Access** | Prevent `KeyError` | `student.get("details", {}).get("age")` → `25` |
+| **Add Nested Key** | Add a key inside inner dict | `student["details"]["country"] = "UK"` |
+| **Update Nested Key** | Modify nested value | `student["details"]["age"] = 26` |
+| **Delete Nested Key** | Remove key from inner dict | `del student["details"]["city"]` |
 | **Delete Inner Dict** | Remove entire inner dictionary | `del student["details"]` |
-| **Pop Nested Key** | Safely remove nested key with default | `student["details"].pop("age", None)` |
-| **Iterate Nested** | Loop through outer and inner keys | `for k,v in student.items(): print(k,v)` |
-| **Nested Loop** | Handle deeper dicts with nested loops | `for k,v in student.items():\n  if isinstance(v, dict):\n    for subk, subv in v.items(): print(subk, subv)` |
-| **Check Nested Key** | Check if key exists inside a nested dict | `'city' in student["details"]` → `True` |
-| **Merge Nested Dicts** | Merge inner dictionary values | `student["details"].update({"grade": "A"})` |
-| **Dynamic Create (setdefault)** | Automatically create nested dicts | `data.setdefault("user", {}).setdefault("info", {})["name"] = "Alice"` |
-| **Dynamic Create (defaultdict)** | Use recursive defaultdicts for infinite depth | `from collections import defaultdict; nested = lambda: defaultdict(nested); nested()["x"]["y"] = 1` |
-| **Traverse Recursively** | Print all levels using recursion | `def traverse(d):\n  for k,v in d.items():\n    if isinstance(v, dict): traverse(v)\n    else: print(k,v)` |
-| **Flatten Nested Dict** | Convert multi-level dict to single-level | `{'details.age': 25, 'details.city': 'London'}` |
-| **Unflatten Dict** | Convert flattened dict back to nested | `{'details': {'age': 25, 'city': 'London'}}` |
-| **Deep Merge Dicts** | Merge dicts recursively | `deep_merge(a,b)` → merges nested keys |
-| **Convert to JSON** | Serialize nested dict to JSON | `json.dumps(student, indent=2)` |
-| **Pretty Print** | Readable format of nested dict | `import pprint; pprint.pprint(student)` |
-| **Get All Keys (Recursive)** | Collect all keys from nested dict | `def keys(d): [k for k,v in d.items() if not isinstance(v,dict)]` |
+| **Pop Nested Key** | Safely remove nested key | `student["details"].pop("age", None)` |
+| **Iterate Nested** | Loop through outer and inner keys | `for k, v in student.items(): print(k, v)` |
+| **Nested Loop** | Handle deeper dicts | `for k,v in student.items(): if isinstance(v, dict): for subk, subv in v.items(): print(subk, subv)` |
+| **Check Nested Key** | Check key in nested dict | `'city' in student["details"]` → `True` |
+| **Merge Nested Dicts** | Merge inner values | `student["details"].update({"grade": "A"})` |
+| **Dynamic Create (setdefault)** | Auto-create nested dicts | `data.setdefault("user", {}).setdefault("info", {})["name"] = "Alice"` |
+| **Dynamic Create (defaultdict)** | Infinite-depth dicts | `from collections import defaultdict; nested = lambda: defaultdict(nested); nested()["x"]["y"] = 1` |
+| **Traverse Recursively** | Print all levels | `def traverse(d): for k,v in d.items(): print(k,v) if not isinstance(v,dict) else traverse(v)` |
+| **Flatten Nested Dict** | Multi-level → single-level | `{'details.age': 25, 'details.city': 'London'}` |
+| **Unflatten Dict** | Single-level → nested | `{'details': {'age': 25, 'city': 'London'}}` |
+| **Deep Merge Dicts** | Merge recursively | `deep_merge(a, b)` |
+| **Convert to JSON** | Serialize nested dict | `json.dumps(student, indent=2)` |
+| **Pretty Print** | Nicely formatted output | `import pprint; pprint.pprint(student)` |
+| **Get All Keys (Recursive)** | Collect all keys | `def keys(d): [k for k,v in d.items() if not isinstance(v,dict)]` |
 | **Convert to List** | Get values from nested level | `list(student["details"].values())` |
-| **Length** | Count keys in top-level dict | `len(student)` |
+| **Length** | Count top-level keys | `len(student)` |
 | **Clear** | Remove all items | `student.clear()` |
-| **Comprehension** | Create nested dict from expression | `{cls: {stu: stu*2 for stu in range(2)} for cls in ["A","B"]}` |
+| **Comprehension** | Create nested dict | `{cls: {stu: stu*2 for stu in range(2)} for cls in ["A","B"]}` |
 
 ---
+
+✅ **Tips for Clean Markdown Tables**
+- Use single backticks (`) for inline code.
+- Don’t add newlines inside table cells.
+- Avoid triple backticks (```) inside tables.
+- Keep column widths aligned for readability.
+
+
 
 ### 🧠 Quick Example
 
