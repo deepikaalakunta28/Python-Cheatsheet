@@ -192,7 +192,7 @@ for cls, students in school.items():
 
 
 
-##Python Lists CheatSheet
+## Python Lists CheatSheet
 
 | Method                          | Description                                           | Example                                   |
 | ------------------------------- | ----------------------------------------------------- | ----------------------------------------- |
